@@ -11,11 +11,6 @@ pipeline {
                                input("do u want to continue")
                                }
                                }
-                   stage('test') {
-                          steps {
-echo "testing stage"
-}
-}
-
-}
-}
+                               }
+                               }
+                  
