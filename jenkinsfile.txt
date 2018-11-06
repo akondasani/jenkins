@@ -1,16 +1,18 @@
 pipeline {
-
-        agent any {
+        agent any 
                stages {
-
-stage('build'){
-echo "build step"}
-stage('input')
-{
-input("do u want to continue"
-}
-stage('test')
-{
+                     stage('build') {
+                           steps {
+                                echo "build step"
+                                }
+                                }
+                    stage('input') {
+                         steps {
+                               input("do u want to continue")
+                               }
+                               }
+                   stage('test') {
+                          steps {
 echo "testing stage"
 }
 }
