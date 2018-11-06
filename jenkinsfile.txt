@@ -1,0 +1,19 @@
+pipeline {
+
+        agent any {
+               stages {
+
+stage('build'){
+echo "build step"}
+stage('input')
+{
+input("do u want to continue"
+}
+stage('test')
+{
+echo "testing stage"
+}
+}
+
+}
+}
