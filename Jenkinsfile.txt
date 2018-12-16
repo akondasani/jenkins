@@ -1,22 +1,29 @@
-pipeline {
-        agent any 
-               stages {
-                     stage('build') {
-                           steps {
-                                echo "build step"
-                                }
-                                }
-                    stage('input') {
-                         steps {
-                               input("do u want to continue")
-                               }
-                               }
-                               
-                    stage('test') {
-                            steps {
-                            echo "testing stage"
-                            }
-                            }
-                               }
-                               }
+pipeline{
+     agent any
+     stages{
+     stage('build'){
+     steps{
+     echo "build stage"
+     }
+     stage('test'){
+     input('do u want to proceed')
+     echo "test stage"
+     }
+     stage('deploy')
+     {
+     parllel{
+     stage('deploy1){steps{
+     echo"deploy1 stage'}}
+     stage('deploy2'){steps{
+     echo "deploy2"
+     }
+     }
+     }
+     }
+     }
+     }
+     
+}
+
+
                   
