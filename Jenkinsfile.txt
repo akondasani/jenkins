@@ -17,7 +17,7 @@ pipeline{
      input('do u want to proceed')
      }
      }
-     parllel{
+     parallel{
      stage('deploy1') {
      steps{
      echo  "deploy1"
