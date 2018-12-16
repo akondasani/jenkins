@@ -17,18 +17,19 @@ pipeline{
      input('do u want to proceed')
      }
      }
-     parallel{
-     stage('deploy1') {
+     
+     stage('parllel deploy') {
      steps{
-     echo  "deploy1"
+     parallel(
+     a: { echo  "deploy1"
      }
-     }
-     stage('deploy2'){
-     steps{
+     b:{
      echo "deplo2"
-     }}
+     }
+     )
      }
      } 
      
+     }
      }
      
