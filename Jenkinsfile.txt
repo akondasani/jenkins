@@ -18,7 +18,7 @@ pipeline{
      }
      }
      parllel{
-     stage('deploy1) {
+     stage('deploy1') {
      steps{
      echo  "deploy1"
      }
