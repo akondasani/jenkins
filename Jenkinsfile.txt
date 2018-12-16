@@ -11,6 +11,24 @@ pipeline{
      echo "test stage"
      }
      }
+     stage('input')
+     {
+     steps{
+     input('do u want to proceed')
+     }
+     }
+     parllel{
+     stage('deploy1) {
+     steps{
+     echo  "deploy1"
+     }
+     }
+     stage('deploy2'){
+     steps{
+     echo "deplo2"
+     }}
+     }
      } 
+     
      }
      
