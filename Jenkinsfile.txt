@@ -13,7 +13,7 @@ pipeline{
      {
      parllel{
      stage('deploy1'){steps{
-     echo"deploy1 stage'}}
+     echo"deploy1 stage"}}
      stage('deploy2'){steps{
      echo "deploy2"
      }
