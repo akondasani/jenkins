@@ -4,26 +4,7 @@ pipeline{
      stage('build') {
      steps {
      echo "build stage"
-     } }
-     stage('test') {
-     input('do u want to proceed')
-     echo "test stage"
      }
-     stage('deploy')
-     {
-     parllel{
-     stage('deploy1'){steps{
-     echo"deploy1 stage"}}
-     stage('deploy2'){steps{
-     echo "deploy2"
-     }
-     }
-     }
-     }
+     } 
      }
      
-     
-}
-
-
-                  
